@@ -20,7 +20,7 @@ export default function NavMenu() {
             <li key={item.name}>
               <a
                 href={item.href}
-                className=" text-[#1b1b1e]  hover:text-white transition-colors duration-200 text-sm tracking-wider"
+                className=" text-[#ccc]  hover:text-white transition-colors duration-200 text-sm tracking-wider"
               >
                 {item.name}
               </a>
