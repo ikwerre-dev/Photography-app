@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Livvic:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-teal: #1F4D4D;
+  --color-beige: #E6D5B8;
+  font-family: "Livvic", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+body {
+  @apply bg-teal-800 text-beige antialiased;
+}
+
+.font-serif {
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.livvic-thin {
+  font-family: "Livvic", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.livvic-extralight {
+  font-family: "Livvic", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.livvic-light {
+  font-family: "Livvic", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.livvic-regular {
+  font-family: "Livvic", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.livvic-medium {
+  font-family: "Livvic", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.livvic-semibold {
+  font-family: "Livvic", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.livvic-bold {
+  font-family: "Livvic", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.livvic-black {
+  font-family: "Livvic", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.livvic-thin-italic {
+  font-family: "Livvic", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.livvic-extralight-italic {
+  font-family: "Livvic", sans-serif;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.livvic-light-italic {
+  font-family: "Livvic", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.livvic-regular-italic {
+  font-family: "Livvic", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.livvic-medium-italic {
+  font-family: "Livvic", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.livvic-semibold-italic {
+  font-family: "Livvic", sans-serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.livvic-bold-italic {
+  font-family: "Livvic", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.livvic-black-italic {
+  font-family: "Livvic", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
