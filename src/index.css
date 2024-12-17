@@ -11,5 +11,5 @@ body {
 }
 
 ::selection {
-  background: #621a7c40;
+  background: transparent;
 }
