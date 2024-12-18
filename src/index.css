@@ -7,9 +7,10 @@
 }
 
 body {
-  background-color: #D8D5DB;
+  background-color: #1F4D4D;
 }
 
 ::selection {
-  background: transparent;
+    display: none;
+    visibility: hidden;
 }

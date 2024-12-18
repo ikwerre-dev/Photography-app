@@ -1,7 +1,8 @@
 "use client";
 
 import React, { useState, useEffect, useCallback } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { useSwipeable } from "react-swipeable";
 import camera from "../assets/camera.png";
 import camera2 from "../assets/camera2.png";
 import camera5 from "../assets/camera5.png";
@@ -63,6 +64,15 @@ export default function ImageSlider() {
   const nextSlide = useCallback(() => changeSlide("next"), [changeSlide]);
   const prevSlide = useCallback(() => changeSlide("prev"), [changeSlide]);
 
+  const handlers = useSwipeable({
+    onSwipedUp: nextSlide,
+    onSwipedDown: prevSlide,
+    onSwipedLeft: prevSlide,
+    onSwipedRight: nextSlide,
+    preventDefaultTouchmoveEvent: true,
+    trackMouse: true
+  });
+
   useEffect(() => {
     const handleKeyDown = (event) => {
       if (event.key === "ArrowRight") {
@@ -85,17 +95,18 @@ export default function ImageSlider() {
 
   return (
     <div
-      className={`relative min-h-screen flex ${slides[currentSlide].bg} flex-col justify-between px-4 py-20`}
+      {...handlers}
+      className={`relative min-h-screen flex w-2/3 ${slides[currentSlide].bg} flex-col justify-between px-4 py-20`}
     >
-      <div className="top-0 text-center z-10 mt-16 md:mt-16">
+      <div className="top-0 text-center z-30 mt-16 md:mt-16">
         <h1 className="flex flex-col items-center justify-center">
-          <span className="z-20 text-xl md:text-3xl lg:text-4xl  text-[#1b1b1e] livvic-medium tracking-wide mb-1">
+          <span className="z-30 text-xl md:text-3xl lg:text-4xl  text-[#1b1b1e] livvic-medium tracking-wide mb-1">
             {slides[currentSlide].alt}
           </span>
-          <span className={`z-20 font-serif text-4xl md:text-6xl lg:text-8xl  text-[#F1D8C0] leading-none   transition-all duration-500 ease-in-out  ${isTransitioning ? "opacity-80 scale-95" : "opacity-100 scale-100"}`}>
+          <span className={`z-30 font-serif text-4xl md:text-6xl lg:text-8xl  text-[#F1D8C0] leading-none   transition-all duration-300 ease-in-out  ${isTransitioning ? "opacity-80 scale-95" : "opacity-100 scale-100"}`}>
             {slides[currentSlide].subtext}
           </span>
-          <span className="z-20 text-xl md:text-3xl lg:text-4xl  text-[#F1D8C044] mt-5 tracking-wide">
+          <span className="z-30 hidden md:flex text-xl md:text-3xl lg:text-4xl  text-[#F1D8C044] mt-5 tracking-wide">
             {slides[currentSlide].subline}
           </span>
         </h1>
@@ -133,3 +144,4 @@ export default function ImageSlider() {
     </div>
   );
 }
+
