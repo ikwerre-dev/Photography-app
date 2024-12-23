@@ -106,8 +106,6 @@ export default function ImageSlider() {
           <span className={`z-30 font-serif text-4xl md:text-6xl lg:text-8xl  text-[#F1D8C0] leading-none   transition-all duration-300 ease-in-out  ${isTransitioning ? "opacity-80 scale-95" : "opacity-100 scale-100"}`}>
             {slides[currentSlide].subtext}
           </span>
-          
-          
           <span className="z-30 hidden md:flex text-xl md:text-3xl lg:text-4xl  text-[#F1D8C044] mt-5 tracking-wide">
             {slides[currentSlide].subline}
           </span>
