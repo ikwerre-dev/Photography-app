@@ -96,7 +96,7 @@ export default function ImageSlider() {
   return (
     <div
       {...handlers}
-      className={`relative min-h-screen flex w-2/3 ${slides[currentSlide].bg} flex-col justify-between px-4 py-20`}
+      className={`relative min-h-screen flex w-full ${slides[currentSlide].bg} flex-col justify-between px-4 py-20`}
     >
       <div className="top-0 text-center z-30 mt-16 md:mt-16">
         <h1 className="flex flex-col items-center justify-center">
@@ -111,7 +111,6 @@ export default function ImageSlider() {
           </span>
         </h1>
       </div>
-
       <div className="absolute z-20 bottom-0 w-full flex items-center justify-center mx-auto">
         <div className="flex gap-[2rem] pt-10 flex-col">
           <div className="flex items-center justify-center gap-[5rem] mx-auto">
